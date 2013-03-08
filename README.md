@@ -1,4 +1,4 @@
-# Malcolmlc's Notepad #
+# Malcolm2608's Notepad #
 
 I created this using [Xamarin Studio](http://xamarin.com/studio) and the gtk# designer it has.
 
