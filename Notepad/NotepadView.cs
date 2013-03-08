@@ -8,7 +8,7 @@ namespace Notepad
 		private string programName = "MyNotePad";
 
 		private string[] authors = {"MalcolmLc"};
-		private string version = "2.0 -Dev";
+		private const string version = "0.1"; // Now the version makes a little more sense version.
 
 		private string savePath;
 		private string SavePath{
