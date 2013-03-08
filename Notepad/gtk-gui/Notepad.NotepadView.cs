@@ -25,7 +25,6 @@ namespace Notepad
 		private global::Gtk.MenuBar menubar1;
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
 		private global::Gtk.TextView textBody;
-		private global::Gtk.RadioButton radiobutton1;
 		private global::Gtk.Statusbar statusbar;
 		
 		protected virtual void Build ()
@@ -115,26 +114,14 @@ namespace Notepad
 			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.GtkScrolledWindow]));
 			w4.Position = 1;
 			// Container child vbox1.Gtk.Box+BoxChild
-			this.radiobutton1 = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("radiobutton1"));
-			this.radiobutton1.CanFocus = true;
-			this.radiobutton1.Name = "radiobutton1";
-			this.radiobutton1.DrawIndicator = true;
-			this.radiobutton1.UseUnderline = true;
-			this.radiobutton1.Group = new global::GLib.SList (global::System.IntPtr.Zero);
-			this.vbox1.Add (this.radiobutton1);
-			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.radiobutton1]));
-			w5.Position = 2;
-			w5.Expand = false;
-			w5.Fill = false;
-			// Container child vbox1.Gtk.Box+BoxChild
 			this.statusbar = new global::Gtk.Statusbar ();
 			this.statusbar.Name = "statusbar";
 			this.statusbar.Spacing = 6;
 			this.vbox1.Add (this.statusbar);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.statusbar]));
-			w6.Position = 3;
-			w6.Expand = false;
-			w6.Fill = false;
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.statusbar]));
+			w5.Position = 2;
+			w5.Expand = false;
+			w5.Fill = false;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
