@@ -6,21 +6,14 @@ namespace Notepad
 	public partial class NotepadView : Gtk.Window // Holy shit thats cool
 	{
 		private string programName = "MyNotePad";
-
 		private string[] authors = {"MalcolmLc"};
 		private const string version = "0.1"; // Now the version makes a little more sense version.
 
 		private string savePath;
+
 		private string SavePath{
-			set
-			{
-				savePath = value;
-				this.Title = savePath +" - "+programName;
-			}
-			get
-			{
-				return savePath;
-			}
+			set{savePath = value;this.Title = savePath +" - "+programName;}
+			get{return savePath;}
 		}
 
 		public NotepadView () : base(Gtk.WindowType.Toplevel)
@@ -64,7 +57,21 @@ namespace Notepad
 			dialog.Authors = authors;
 			dialog.ProgramName = programName;
 			dialog.Comments = "A basic basic text editor";
+
+			// The following makes the dialog hide when needed
+			dialog.DeleteEvent += (object o, DeleteEventArgs args) =>{
+				dialog.Hide();
+			};
+			dialog.Response+= (object o, ResponseArgs args) =>{
+				ResponseType id = args.ResponseId;
+				if ( id == ResponseType.Close || id == ResponseType.Cancel){
+					dialog.Hide();
+				}
+			};
+
+			// and now run the dialog
 			dialog.Run ();
+		
 
 
 		}
